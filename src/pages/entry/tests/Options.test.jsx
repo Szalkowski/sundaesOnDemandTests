@@ -10,3 +10,19 @@ test('displays image for each scoop', async () => {
   const altTexts = scoopImages.map((element) => element.alt);
   expect(altTexts).toEqual(['Chocolate scoop', 'Vanilla scoop']);
 });
+
+test('display image for each tooping', async () => {
+  render(<Options optionType={'toopings'} />);
+
+  const toopingImages = await screen.findAllByRole('img', {
+    name: /tooping$/i,
+  });
+  expect(toopingImages).toHaveLength(3);
+
+  const altTexts = toopingImages.map((element) => element.alt);
+  expect(altTexts).toEqual([
+    'Cherries tooping',
+    'M&Ms tooping',
+    'Hot Fudge tooping',
+  ]);
+});

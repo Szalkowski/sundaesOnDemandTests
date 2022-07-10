@@ -15,4 +15,22 @@ export const handlers = [
       ]),
     );
   }),
+  rest.get('http://localhost:3000/toopings', (req, res, ctx) => {
+    return res(
+      ctx.json([
+        {
+          name: 'Cherries',
+          imagePath: '/images/cherries.png',
+        },
+        {
+          name: 'M&Ms',
+          imagePath: '/images/m&ms.png',
+        },
+        {
+          name: 'Hot Fudge',
+          imagePath: '/images/hot-futge.png',
+        },
+      ]),
+    );
+  }),
 ];
