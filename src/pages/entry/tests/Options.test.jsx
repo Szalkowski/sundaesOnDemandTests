@@ -12,7 +12,7 @@ test('displays image for each scoop', async () => {
 });
 
 test('display image for each tooping', async () => {
-  render(<Options optionType={'toopings'} />);
+  render(<Options optionType={'toppings'} />);
 
   const toopingImages = await screen.findAllByRole('img', {
     name: /tooping$/i,

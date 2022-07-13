@@ -15,7 +15,7 @@ export const handlers = [
       ]),
     );
   }),
-  rest.get('http://localhost:3000/toopings', (req, res, ctx) => {
+  rest.get('http://localhost:3000/toppings', (req, res, ctx) => {
     return res(
       ctx.json([
         {
