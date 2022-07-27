@@ -1,6 +1,6 @@
 import { Col, Form, Row } from 'react-bootstrap';
 
-export default function ToopingOption({ name, imagePath, updateItemCount }) {
+export default function ToppingOption({ name, imagePath, updateItemCount }) {
   const handleCheckboxChange = (event) => {
     updateItemCount(name, event.target.checked ? 1 : 0);
   };
@@ -10,7 +10,7 @@ export default function ToopingOption({ name, imagePath, updateItemCount }) {
       <img
         style={{ width: '80%' }}
         src={`http://localhost:3000${imagePath}`}
-        alt={`${name} tooping`}
+        alt={`${name} topping`}
       />
       <Form.Group
         as={Row}
