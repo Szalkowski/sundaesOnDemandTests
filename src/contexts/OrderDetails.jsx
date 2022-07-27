@@ -1,13 +1,6 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import { pricePerItem } from '../constants';
-
-function formatCurrency(amount) {
-  return Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    minimumFractionDigits: 2,
-  }).format(amount);
-}
+import { formatCurrency } from '../utils';
 
 const OrderDetails = createContext();
 
